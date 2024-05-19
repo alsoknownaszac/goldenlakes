@@ -1,5 +1,5 @@
 import Image from "next/image";
-import explore_Destinations from "../../../assets/images/explore_destinations.png";
+import explore_Destinations from "../images/explore_destinations.png";
 import { FaArrowRight } from "react-icons/fa6";
 
 export default function Explore_Destinations() {
