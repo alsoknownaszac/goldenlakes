@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Carousel } from "@/components/custom/Carousel";
 import memories_img_1 from "../images/memories_img_1.png";
-import hero_Image from "../images/hero_image.png";
+import hero_Image from "../images/hero_image.avif";
 import explore_destinations from "../images/explore_destinations.png";
 import { FaArrowRight } from "react-icons/fa";
 

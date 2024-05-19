@@ -1,6 +1,6 @@
 import Image from "next/image";
 import explore_Destinations from "../images/explore_destinations.png";
-import hero_Image from "../images/hero_image.png";
+import hero_Image from "../images/hero_image.avif";
 import ReviewsStar from "../components/reviewIcon/ReviewsStar";
 
 export default function Reviews() {
