@@ -1,0 +1,40 @@
+ul.service_list li {
+  padding-left: 33px;
+  margin-bottom: 22em;
+  list-style: none;
+}
+
+ul.service_list li {
+  position: relative; /* so that pseudoelements are positioned relatively to their "li"s*/
+  /* use padding-bottom instead of margin-bottom.*/
+  margin-bottom: 0; /* This overrides previously specified margin-bottom */
+}
+
+ul.service_list li:after {
+  /* bullets */
+  content: url("../assets/icons/services_list_icon.svg");
+  position: absolute;
+  left: 1px; /*adjust manually*/
+  top: 3px;
+}
+
+ul.service_list li:before {
+  /* lines */
+  content: "";
+  position: absolute;
+  left: 7px; /* adjust manually */
+  /* #335012 */
+  border-left: 2px solid #335012;
+  height: 100%;
+  width: 2px;
+}
+
+ul.service_list li:first-child:before {
+  /* first li's line */
+  top: 6px; /* moves the line down so that it disappears under the bullet. Adjust manually */
+}
+
+ul.service_list li:last-child:before {
+  /* last li's line */
+  height: 6px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+}

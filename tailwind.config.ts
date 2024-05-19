@@ -6,15 +6,43 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  images: {
+    deviceSizes: [375, 640, 744, 1024, 1280],
+    imageSizes: [256, 540, 670],
+    formats: ["image/avif", "image/webp"],
+  },
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    fontFamily: {
+      satoshi: ["Satoshi"],
+      display: ['"Clash Display"'],
+    },
+    // screens: {
+    //   sm: "435px",
+    //   lg: "804px",
+    //   xl: "1340px",
+    // },
+    screens: {
+      sm: "375px",
+      sm_0: "640px",
+      lg: "744px",
+      lg_0: "1024px",
+      xl: "1280px",
+    },
+    container: {
+      center: true,
+      // padding: {
+      //   sm: "1.313rem",
+      //   lg: "2.5rem",
+      //   xl: "5.5rem",
+      // },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }: any | null) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
 };
+
 export default config;
