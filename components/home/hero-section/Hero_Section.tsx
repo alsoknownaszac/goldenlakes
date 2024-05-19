@@ -1,5 +1,5 @@
 import Image from "next/image";
-import hero_Image from "@/assets/images/hero_image.png";
+import hero_Image from "../../../assets/images/hero_image.png";
 import Hero_Logo from "../components/icons/hero-section/Hero_Logo";
 import Hero_Icon_1 from "../components/icons/hero-section/Hero_Icon_1";
 import Hero_Icon_2 from "../components/icons/hero-section/Hero_Icon_2";

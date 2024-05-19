@@ -1,5 +1,5 @@
 import Image from "next/image";
-import golden_lakes_bg from "@/assets/images/golden_lakes_bg.png";
+import golden_lakes_bg from "../../../assets/images/golden_lakes_bg.png";
 import "@/app/services.css";
 
 export default function Benefits() {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import golden_lakes_bg_2 from "@/assets/images/golden_lakes_bg_2.png";
+import golden_lakes_bg_2 from "../../../assets/images/golden_lakes_bg_2.png";
 
 export default function Call_To_Action() {
   return (

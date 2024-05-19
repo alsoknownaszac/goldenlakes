@@ -1,4 +1,4 @@
-import heroIV from "@/assets/icons/hero_icon_4.svg";
+import heroIV from "../../../../../assets/icons/hero_icon_4.svg";
 import Image from "next/image";
 
 export default function Hero_Icon_4() {

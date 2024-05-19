@@ -1,5 +1,5 @@
 import Image from "next/image";
-import hero_Logo_2 from "@/assets/icons/hero_logo_2.svg";
+import hero_Logo_2 from "../../../assets/icons/hero_logo_2.svg";
 import {
   FaFacebookF,
   FaInstagram,

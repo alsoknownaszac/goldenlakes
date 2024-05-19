@@ -1,5 +1,5 @@
 import Image from "next/image";
-import hero_Logo from "@/assets/icons/hero_logo.svg";
+import hero_Logo from "../../../../../assets/icons/hero_logo.svg";
 
 export default function Hero_Logo() {
   return (

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import explore_Destinations from "@/assets/images/explore_destinations.png";
-import hero_Image from "@/assets/images/hero_Image.png";
+import explore_Destinations from "../../../assets/images/explore_destinations.png";
+import hero_Image from "../../../assets/images/hero_Image.png";
 
 export default function Packages() {
   return (
