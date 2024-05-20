@@ -1,5 +1,3 @@
-"use client";
-
 import { CldImage as CldImageDefault, CldImageProps } from "next-cloudinary";
 
 const normalizeSrc = (src: any) => (src[0] === "/" ? src.slice(1) : src);

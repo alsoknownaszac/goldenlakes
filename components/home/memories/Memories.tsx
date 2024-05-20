@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Carousel } from "@/components/custom/Carousel";
 import memories_img_1 from "../images/memories_img_1.png";

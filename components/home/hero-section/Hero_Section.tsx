@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Hero_Logo from "../../icons_components/icons/Hero_Logo";
 import Hero_Icon_1 from "../../icons_components/icons/Hero_Icon_1";

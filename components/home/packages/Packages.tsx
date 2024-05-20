@@ -1,4 +1,3 @@
-"use client";
 import hero_Image from "../images/hero-image.png";
 import CldImages from "@/components/cloudinary/CldImages";
 

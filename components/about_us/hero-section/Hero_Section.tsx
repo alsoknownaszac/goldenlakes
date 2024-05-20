@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Hero_Logo from "../../icons_components/icons/Hero_Logo";
 import CldImages from "@/components/cloudinary/CldImages";
