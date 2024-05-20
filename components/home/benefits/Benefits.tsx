@@ -1,11 +1,12 @@
 import Image from "next/image";
 import golden_lakes_bg from "../images/golden_lakes_bg.png";
 import "@/app/services.css";
+import CldImages from "@/components/cloudinary/CldImages";
 
 export default function Benefits() {
   return (
     <section className="relative">
-      <div className="container px-[27px] lg:px-[38px] xl:px-[89px] pt-[51px] pb-[51px] lg:pt-[51px] lg:pb-[116px] xl:pt-[71px] xl:pb-[71px]">
+      <div className="sm:container lg_0:container xl:container px-[27px] lg:px-[38px] xl:px-[89px] pt-[51px] pb-[51px] lg:pt-[51px] lg:pb-[116px] xl:pt-[71px] xl:pb-[71px]">
         <div className="grid grid-cols-5 gap-y-[39px] lg:gap-y-[51px] pb-[75px] lg:pb-[120px]">
           <div className="col-span-5 xl:col-span-3">
             <div className="mb-[35px] lg:mb-[44px]">
@@ -40,8 +41,24 @@ export default function Benefits() {
             </div>
           </div>
           <div className="col-span-5 h-fit xl:col-span-2 ml-auto relative ">
-            <div className="w-[185.02px] lg:w-[320px] h-[215.31px] lg:h-[380px] relative right-0 bg-blue-700 rounded-[40px]"></div>
-            <div className="w-[200.44px] lg:w-[350px] h-[223.57px] lg:h-[390px] absolute -left-[105px] lg:-left-[255px] -bottom-[75px] lg:-bottom-[120px] bg-red-700 rounded-[40px]"></div>
+            <div className="w-[185.02px] lg:w-[320px] h-[215.31px] lg:h-[380px] relative right-0">
+              <CldImages
+                className="w-full h-full absolute rounded-[40px]"
+                src="/goldenlakes/benefits2_njdqjk"
+                style={{ objectFit: "cover" }}
+                fill
+                alt="lineup-img"
+              />
+            </div>
+            <div className="w-[200.44px] lg:w-[350px] h-[223.57px] lg:h-[390px] absolute -left-[105px] lg:-left-[255px] -bottom-[75px] lg:-bottom-[120px]">
+              <CldImages
+                className="w-full h-full absolute rounded-[40px]"
+                src="/goldenlakes/benefits1_mtsqmb"
+                style={{ objectFit: "cover" }}
+                fill
+                alt="lineup-img"
+              />
+            </div>
           </div>
         </div>
       </div>

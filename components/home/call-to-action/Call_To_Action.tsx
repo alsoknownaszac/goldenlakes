@@ -3,7 +3,7 @@ import golden_lakes_bg_2 from "../images/golden_lakes_bg_2.png";
 
 export default function Call_To_Action() {
   return (
-    <section className="relative bg-[#0C4B48]">
+    <section className="relative bg-[#0C4B48] overflow-hidden">
       <div className="absolute bottom-0 w-screen lg:w-[672px] xl:left-[5vw] h-[297px]">
         <Image
           className="absolute object-cover"
@@ -12,7 +12,7 @@ export default function Call_To_Action() {
           alt="lineup-img"
         />
       </div>
-      <div className="container px-[25.5px] lg:px-0 lg:mx-auto max-w-[364px] lg:max-w-[482px] xl:max-w-[541px] pt-[40px] pb-[43px] lg:pt-[60px] lg:pb-[60px] xl:pt-[58px] xl:pb-[58px]">
+      <div className="sm:container lg_0:container xl:container px-[25.5px] lg:px-0 lg:mx-auto max-w-[364px] lg:max-w-[482px] xl:max-w-[541px] pt-[40px] pb-[43px] lg:pt-[60px] lg:pb-[60px] xl:pt-[58px] xl:pb-[58px]">
         <div className="mb-[30px] text-center">
           <div className="text-[24px] text-[#EBAF15] lg:text-[32px] xl:text-[36px] leading-[28.8px] lg:leading-[44.8px] xl:leading-[54.4px] font-display font-medium mb-[16px]">
             Encounter Golden <br className="lg:hidden" /> Memories

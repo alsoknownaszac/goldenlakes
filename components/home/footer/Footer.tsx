@@ -10,7 +10,7 @@ import {
 export default function Footer() {
   return (
     <footer id="contacts">
-      <div className="container px-[64px] py-[80px]">
+      <div className="sm:container lg_0:container xl:container px-[64px] py-[80px]">
         <div className="flex items-center justify-between mb-[40px] xl:mb-[80px]">
           <div className="w-[50%] xl:w-[30%]">
             <Image

@@ -1,19 +1,47 @@
 import Image from "next/image";
 import golden_lakes_bg from "../images/golden_lakes_bg.png";
 import "@/app/services.css";
+import CldImages from "@/components/cloudinary/CldImages";
+
+const expectations_list = [
+  {
+    imageUrl: "expectations3_rtr6g4",
+  },
+  {
+    imageUrl: "expectations1_yaiwwe",
+  },
+  {
+    imageUrl: "expectations5_cgcnlt",
+  },
+  {
+    imageUrl: "expectations2_sfjuxq",
+  },
+  {
+    imageUrl: "expectations8_pjle9v",
+  },
+  {
+    imageUrl: "expectations4_cbtbyo",
+  },
+  {
+    imageUrl: "expectations6_f0siwz",
+  },
+  {
+    imageUrl: "expectations7_pwtryi",
+  },
+];
 
 export default function High_Expectations() {
   return (
     <section className="relative ">
       <div className="absolute top-[22%] lg:top-[20%] xl:top-[35%] w-screen lg:w-[672px] xl:-left-[10vw] h-[297px]">
-        <Image
+        <CldImages
           className="absolute object-cover"
-          src={golden_lakes_bg}
+          src="/goldenlakes/golden_lakes_bg_w895dn"
           fill
           alt="lineup-img"
         />
       </div>
-      <div className="container px-[30px] lg:px-[38px] xl:px-[101px] pt-[27px] pb-[56px] lg:pt-[51px] lg:pb-[40px] xl:pt-[69px] xl:pb-[69px]">
+      <div className="sm:container lg_0:container xl:container px-[30px] lg:px-[38px] xl:px-[101px] pt-[27px] pb-[56px] lg:pt-[51px] lg:pb-[40px] xl:pt-[69px] xl:pb-[69px]">
         <div className="grid grid-cols-6 gap-y-[39px] lg:gap-y-[51px]">
           <div className="col-span-6 xl:col-span-3">
             <div className="mb-[33px] lg:mb-[27px] xl:mb-[37px]">
@@ -83,15 +111,79 @@ export default function High_Expectations() {
               </ul>
             </div>
           </div>
-          <div className="w-[330px] xl:h-fit xl:mt-[30px] col-span-5 xl:col-span-3 ml-auto relative lg:w-[500px] grid grid-cols-12 grid-rows-12 gap-y-[11px] lg:gap-y-[17px] gap-x-[13px] lg:gap-x-[20px]">
-            <div className="w-full h-[91.91px] lg:h-[148px] relative left-[10px] col-span-4 row-span-3 col-start-6 bg-red-700 rounded-[8px]"></div>
-            <div className="w-full h-[91.91px] lg:h-[148px] relative col-span-4 row-span-3 row-start-4 col-start-5 bg-red-700 rounded-[8px]"></div>
-            <div className="w-full h-[91.91px] lg:h-[148px] relative top-[22px] lg:top-[30px] col-span-4 row-span-3 row-start-4 col-start-9 bg-red-700 rounded-[8px]"></div>
-            <div className="w-full h-[91.91px] lg:h-[148px] relative -left-[12px] lg:-left-[20px] col-span-4 row-span-3 row-start-7 bg-red-700 rounded-[8px]"></div>
-            <div className="w-full h-[91.91px] lg:h-[148px] relative top-[6px] lg:top-[9px] col-span-4 row-span-3 row-start-7 bg-red-700 rounded-[8px]"></div>
-            <div className="w-full h-[91.91px] lg:h-[148px] relative top-[35px] lg:top-[50px] col-span-4 row-span-3 row-start-7 bg-red-700 rounded-[8px]"></div>
-            <div className="w-full h-[91.91px] lg:h-[148px] relative top-[6px] lg:top-[9px] col-span-4 row-span-3 row-start-10 col-start-3 bg-red-700 rounded-[8px]"></div>
-            <div className="w-full h-[91.91px] lg:h-[148px] relative top-[35px] lg:top-[50px] col-span-4 row-span-3 row-start-10 col-start-7 bg-red-700 rounded-[8px]"></div>
+          <div className="w-[330px] xl:h-fit xl:mt-[30px] col-span-5 xl:col-span-3 ml-auto relative lg:w-[500px] grid grid-cols-12 grid-rows-12 gap-y-[11px] lg:gap-y-[17px] gap-x-[13px] lg:gap-x-[20px] pb-[10%]">
+            <div className="w-full h-[91.91px] lg:h-[148px] relative left-[10px] col-span-4 row-span-3 col-start-6">
+              <CldImages
+                className="w-full h-full rounded-[12px]"
+                src={`/goldenlakes/${expectations_list[0].imageUrl}`}
+                style={{ objectFit: "cover" }}
+                alt="lineup-img"
+                fill
+              />
+            </div>
+            <div className="w-full h-[91.91px] lg:h-[148px] relative col-span-4 row-span-3 row-start-4 col-start-5">
+              <CldImages
+                className="w-full h-full rounded-[12px]"
+                src={`/goldenlakes/${expectations_list[1].imageUrl}`}
+                style={{ objectFit: "cover" }}
+                alt="lineup-img"
+                fill
+              />
+            </div>
+            <div className="w-full h-[91.91px] lg:h-[148px] relative top-[22px] lg:top-[30px] col-span-4 row-span-3 row-start-4 col-start-9">
+              <CldImages
+                className="w-full h-full rounded-[12px]"
+                src={`/goldenlakes/${expectations_list[2].imageUrl}`}
+                style={{ objectFit: "cover" }}
+                alt="lineup-img"
+                fill
+              />
+            </div>
+            <div className="w-full h-[91.91px] lg:h-[148px] relative -left-[12px] lg:-left-[20px] col-span-4 row-span-3 row-start-7">
+              <CldImages
+                className="w-full h-full rounded-[12px]"
+                src={`/goldenlakes/${expectations_list[3].imageUrl}`}
+                style={{ objectFit: "cover" }}
+                alt="lineup-img"
+                fill
+              />
+            </div>
+            <div className="w-full h-[91.91px] lg:h-[148px] relative top-[6px] lg:top-[9px] col-span-4 row-span-3 row-start-7">
+              <CldImages
+                className="w-full h-full rounded-[12px]"
+                src={`/goldenlakes/${expectations_list[4].imageUrl}`}
+                style={{ objectFit: "cover" }}
+                alt="lineup-img"
+                fill
+              />
+            </div>
+            <div className="w-full h-[91.91px] lg:h-[148px] relative top-[35px] lg:top-[50px] col-span-4 row-span-3 row-start-7">
+              <CldImages
+                className="w-full h-full rounded-[12px]"
+                src={`/goldenlakes/${expectations_list[5].imageUrl}`}
+                style={{ objectFit: "cover" }}
+                alt="lineup-img"
+                fill
+              />
+            </div>
+            <div className="w-full h-[91.91px] lg:h-[148px] relative top-[6px] lg:top-[9px] col-span-4 row-span-3 row-start-10 col-start-3">
+              <CldImages
+                className="w-full h-full rounded-[12px]"
+                src={`/goldenlakes/${expectations_list[6].imageUrl}`}
+                style={{ objectFit: "cover" }}
+                alt="lineup-img"
+                fill
+              />
+            </div>
+            <div className="w-full h-[91.91px] lg:h-[148px] relative top-[35px] lg:top-[50px] col-span-4 row-span-3 row-start-10 col-start-7">
+              <CldImages
+                className="w-full h-full rounded-[12px]"
+                src={`/goldenlakes/${expectations_list[7].imageUrl}`}
+                style={{ objectFit: "cover" }}
+                alt="lineup-img"
+                fill
+              />
+            </div>
           </div>
         </div>
       </div>

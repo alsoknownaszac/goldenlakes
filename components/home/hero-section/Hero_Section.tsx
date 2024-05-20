@@ -1,12 +1,13 @@
-import Image from "next/image";
-import hero_Image from "../images/hero_image.avif";
-import Hero_Logo from "../components/icons/hero-section/Hero_Logo";
-import Hero_Icon_1 from "../components/icons/hero-section/Hero_Icon_1";
-import Hero_Icon_2 from "../components/icons/hero-section/Hero_Icon_2";
-import Hero_Icon_4 from "../components/icons/hero-section/Hero_Icon_4";
-import Hero_Icon_3 from "../components/icons/hero-section/Hero_Icon_3";
-import Hero_Icon_5 from "../components/icons/hero-section/Hero_Icon_5";
-import Hero_Icon_6 from "../components/icons/hero-section/Hero_Icon_6";
+"use client";
+import React from "react";
+import Hero_Logo from "../../icons_components/icons/Hero_Logo";
+import Hero_Icon_1 from "../../icons_components/icons/Hero_Icon_1";
+import Hero_Icon_2 from "../../icons_components/icons/Hero_Icon_2";
+import Hero_Icon_4 from "../../icons_components/icons/Hero_Icon_4";
+import Hero_Icon_3 from "../../icons_components/icons/Hero_Icon_3";
+import Hero_Icon_5 from "../../icons_components/icons/Hero_Icon_5";
+import Hero_Icon_6 from "../../icons_components/icons/Hero_Icon_6";
+import CldImages from "@/components/cloudinary/CldImages";
 
 export default function Hero_Section() {
   return (
@@ -14,10 +15,11 @@ export default function Hero_Section() {
       id="hero"
       className="hero text-white relative h-[609px] w-full xl:h-[833px] px-[21px] lg:px-[34px] xl:px-[88px] pt-[24px] lg:pt-[40px] xl:pt-[37px] pb-[35px] xl:pb-[42px]"
     >
-      <Image
+      <CldImages
         className="w-full h-full absolute"
-        src={hero_Image}
+        src="/goldenlakes/hero_image_mcvl6o"
         style={{ objectFit: "cover" }}
+        priority={true}
         fill
         alt="lineup-img"
       />

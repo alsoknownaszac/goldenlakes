@@ -30,11 +30,9 @@ const config: Config = {
     },
     container: {
       center: true,
-      // padding: {
-      //   sm: "1.313rem",
-      //   lg: "2.5rem",
-      //   xl: "5.5rem",
-      // },
+      padding: {
+        default: "0px",
+      },
     },
   },
   plugins: [

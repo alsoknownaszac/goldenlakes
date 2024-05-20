@@ -12,7 +12,7 @@ export default function Visit_Nigeria() {
           alt="lineup-img"
         />
       </div>
-      <div className="container px-[19px] lg:px-[38px] xl:px-[89px] pt-[30px] pb-[53px] lg:pt-[98px] lg:pb-[95px] xl:pt-[88px] xl:pb-[160px]">
+      <div className="sm:container lg_0:container xl:container px-[19px] lg:px-[38px] xl:px-[89px] pt-[30px] pb-[53px] lg:pt-[98px] lg:pb-[95px] xl:pt-[88px] xl:pb-[160px]">
         <div className="flex flex-col lg:flex-row justify-between lg:items-center max-w-[380px] mx-auto lg:mx-[unset] lg:max-w-[unset] mb-[35px] lg:mb-[56px] xl:mb-[64px]">
           <div className="text-[24px] lg:text-[32px] xl:text-[36px] leading-[28.8px] lg:leading-[38.4px] xl:leading-[43.2px] font-display font-medium mb-[24px] lg:mb-[unset]">
             Why <span className="text-[#EBAF15]">visit Nigeria</span>

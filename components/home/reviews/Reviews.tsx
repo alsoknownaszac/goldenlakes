@@ -1,12 +1,13 @@
 import Image from "next/image";
 import explore_Destinations from "../images/explore_destinations.png";
-import hero_Image from "../images/hero_image.avif";
-import ReviewsStar from "../components/reviewIcon/ReviewsStar";
+import hero_Image from "../images/hero-image.png";
+import ReviewsStar from "../../icons_components/reviewIcon/ReviewsStar";
+import CldImages from "@/components/cloudinary/CldImages";
 
 export default function Reviews() {
   return (
     <section className="relative">
-      <div className="container px-[23px] lg:px-[42px] xl:px-[64px] pt-[43px] pb-[50px] lg:pt-[82px] lg:pb-[105px] xl:pt-[82px] xl:pb-[82px]">
+      <div className="sm:container lg_0:container xl:container px-[23px] lg:px-[42px] xl:px-[64px] pt-[43px] pb-[50px] lg:pt-[82px] lg:pb-[105px] xl:pt-[82px] xl:pb-[82px]">
         <div className="mb-[48px] lg:mb-[74px] xl:mb-[60px]">
           <div className="text-center text-[24px] lg:text-[32px] xl:text-[36px] leading-[28.8px] lg:leading-[38.4px] xl:leading-[43.2px] font-display font-medium">
             Don&apos;t take our words for it, read{" "}
@@ -30,7 +31,15 @@ export default function Reviews() {
               </div>
 
               <div className="flex gap-[8px] items-center">
-                <div className="w-[56px] h-[56px] rounded-full bg-red-700"></div>
+                <div className="w-[56px] h-[56px] relative rounded-full">
+                  <CldImages
+                    className="w-full h-full rounded-[12px]"
+                    src={`/goldenlakes/reviews1_flormf`}
+                    style={{ objectFit: "cover" }}
+                    alt="lineup-img"
+                    fill
+                  />
+                </div>
                 <div className="text-[#292525] text-[16px] leading-[24px] font-display font-medium">
                   Miranda, BC, Canada
                 </div>
@@ -57,7 +66,15 @@ export default function Reviews() {
               </div>
 
               <div className="flex gap-[8px] items-center">
-                <div className="w-[56px] h-[56px] rounded-full bg-red-700"></div>
+                <div className="w-[56px] h-[56px] relative rounded-full">
+                  <CldImages
+                    className="w-full h-full rounded-[12px]"
+                    src={`/goldenlakes/reviews2_b1gs0v`}
+                    style={{ objectFit: "cover" }}
+                    alt="lineup-img"
+                    fill
+                  />
+                </div>
                 <div className="text-[#292525] text-[16px] leading-[24px] font-display font-medium">
                   Steffani Ann Mejia - California USA
                 </div>
@@ -84,7 +101,15 @@ export default function Reviews() {
               </div>
 
               <div className="flex gap-[8px] items-center">
-                <div className="w-[56px] h-[56px] rounded-full bg-red-700"></div>
+                <div className="w-[56px] h-[56px] relative rounded-full">
+                  <CldImages
+                    className="w-full h-full rounded-[12px]"
+                    src={`/goldenlakes/reviews3_ta9k7q`}
+                    style={{ objectFit: "cover" }}
+                    alt="lineup-img"
+                    fill
+                  />
+                </div>
                 <div className="text-[#292525] text-[16px] leading-[24px] font-display font-medium">
                   Morgan Bullock
                 </div>

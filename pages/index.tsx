@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
 import Head from "next/head";
-import type { NextPageWithLayout } from "./_app";
+// import type { NextPageWithLayout } from "./_app";
 import Hero_Section from "@/components/home/hero-section/Hero_Section";
 import Explore_Destinations from "@/components/home/explore-destinations/Explore_Destinations";
 import High_Expectations from "@/components/home/high-expectations/High_Expectations";
@@ -12,7 +12,7 @@ import Reviews from "@/components/home/reviews/Reviews";
 import Call_To_Action from "@/components/home/call-to-action/Call_To_Action";
 import Footer from "@/components/home/footer/Footer";
 
-const Home: NextPageWithLayout = () => {
+const Home = () => {
   return (
     <div className={`h-screen w-screen overflow-x-hidden `}>
       <Head>

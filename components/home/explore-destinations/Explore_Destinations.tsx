@@ -4,8 +4,8 @@ import { FaArrowRight } from "react-icons/fa6";
 
 export default function Explore_Destinations() {
   return (
-    <section className="container">
-      <div className="px-[16px] lg:px-[38px] xl:px-[88px] py-[34px] lg:pt-[53px] lg:pb-[114px] xl:pt-[106px] xl:pb-[119px]">
+    <section className="relative">
+      <div className="sm:container lg_0:container xl:container px-[16px] lg:px-[38px] xl:px-[88px] py-[34px] lg:pt-[53px] lg:pb-[114px] xl:pt-[106px] xl:pb-[119px]">
         <div className="text-[24px] lg:text-[32px] xl:text-[36px] leading-[28.8px] lg:leading-[38.4px] xl:leading-[43.2px] font-clash font-medium mb-[30px] lg:mb-[36px]">
           Explore famous <br />
           destination!

@@ -1,11 +1,11 @@
-import Image from "next/image";
-import explore_Destinations from "../images/explore_destinations.png";
-import hero_Image from "../images/hero_image.avif";
+"use client";
+import hero_Image from "../images/hero-image.png";
+import CldImages from "@/components/cloudinary/CldImages";
 
 export default function Packages() {
   return (
     <section className="relative ">
-      <div className="container px-[23px] lg:px-[108px] xl:px-[89px] pt-[55px] pb-[73px] lg:pt-[84px] lg:pb-[84px] xl:pt-[70px] xl:pb-[59px]">
+      <div className="sm:container lg_0:container xl:container px-[23px] lg:px-[108px] xl:px-[89px] pt-[55px] pb-[73px] lg:pt-[84px] lg:pb-[84px] xl:pt-[70px] xl:pb-[59px]">
         <div className="mb-[37px] lg:mb-[77px] xl:mb-[75px]">
           <div className="text-center text-[24px] lg:text-[32px] xl:text-[36px] leading-[28.8px] lg:leading-[38.4px] xl:leading-[43.2px] font-display font-medium">
             Our <span className="text-[#EBAF15]">premium</span> packages
@@ -14,9 +14,9 @@ export default function Packages() {
         <div className="grid grid-cols-3 gap-[61px] xl:gap-[20px] xl:pt-[75px]">
           <div className="col-span-3 xl:col-span-1">
             <div className="relative h-[148px] lg:h-[208px] xl:h-[208px] mx-auto max-w-[420px] lg:max-w-[580px] xl:max-w-[414px] ">
-              <Image
+              <CldImages
                 className="w-full h-full absolute rounded-t-[40px]"
-                src={hero_Image}
+                src="/goldenlakes/packages_bhncnp"
                 style={{ objectFit: "cover" }}
                 fill
                 alt="lineup-img"
@@ -70,9 +70,9 @@ export default function Packages() {
           </div>
           <div className="col-span-3 xl:col-span-1 relative xl:-top-[75px]">
             <div className="relative h-[148px] lg:h-[208px] xl:h-[208px] mx-auto max-w-[420px] lg:max-w-[580px] xl:max-w-[414px] ">
-              <Image
+              <CldImages
                 className="w-full h-full absolute rounded-t-[40px]"
-                src={explore_Destinations}
+                src="/goldenlakes/explore1_m29goe"
                 style={{ objectFit: "cover" }}
                 fill
                 alt="lineup-img"
@@ -126,9 +126,9 @@ export default function Packages() {
           </div>
           <div className="col-span-3 xl:col-span-1">
             <div className="relative h-[148px] lg:h-[208px] xl:h-[208px] mx-auto max-w-[420px] lg:max-w-[580px] xl:max-w-[414px] ">
-              <Image
+              <CldImages
                 className="w-full h-full absolute rounded-t-[40px]"
-                src={hero_Image}
+                src="/goldenlakes/explore5_arovn6"
                 style={{ objectFit: "cover" }}
                 fill
                 alt="lineup-img"

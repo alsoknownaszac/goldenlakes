@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
+import CldImages from "../cloudinary/CldImages";
 import "./Carousel.css";
-import Image from "next/image";
 
 export const Carousel = ({ data }: any) => {
   const [slide, setSlide] = useState(0);
@@ -11,18 +11,18 @@ export const Carousel = ({ data }: any) => {
     setSlide(slide === data.length - 1 ? 0 : slide + 1);
   };
 
-  const prevSlide = () => {
-    setSlide(slide === 0 ? data.length - 1 : slide - 1);
-  };
+  // const prevSlide = () => {
+  //   setSlide(slide === 0 ? data.length - 1 : slide - 1);
+  // };
 
   return (
     <div className="carousel mx-auto h-[406px] lg:h-[320px] xl:h-[634px] max-w-[420px] lg:max-w-[680px] xl:max-w-[1280px]">
       {data.map((item: any, idx: number) => {
         return (
-          <Image
+          <CldImages
             fill
             key={idx}
-            src={item.src}
+            src={`/goldenlakes/${item.src}`}
             alt={item.alt}
             style={{ objectFit: "cover" }}
             className={`${
@@ -35,7 +35,7 @@ export const Carousel = ({ data }: any) => {
         onClick={nextSlide}
         className="arrow arrow-right fill-black"
       />
-      <span className="indicators">
+      {/* <span className="indicators">
         {data.map((_: any, idx: any) => {
           return (
             <button
@@ -47,7 +47,7 @@ export const Carousel = ({ data }: any) => {
             ></button>
           );
         })}
-      </span>
+      </span> */}
     </div>
   );
 };
