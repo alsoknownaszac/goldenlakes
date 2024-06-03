@@ -17,10 +17,9 @@ type AppPropsWithLayout = AppProps & {
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const [display, setDisplay] = useState({
     modal: false,
-    navMenu: false,
   });
 
-  const displayValue = useMemo(
+  const displayData = useMemo(
     () => ({ display, setDisplay }),
     [display, setDisplay]
   );
@@ -28,7 +27,7 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
   return getLayout(
-    <AppContext.Provider value={displayValue}>
+    <AppContext.Provider value={displayData}>
       <Component {...pageProps} />
     </AppContext.Provider>
   );

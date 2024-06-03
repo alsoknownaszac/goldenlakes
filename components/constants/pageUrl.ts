@@ -1,29 +1,18 @@
-export const PageUrlSm = [
+export const PageUrl = [
   {
-    link: "/home#skills",
-    name: "Skills",
+    link: "/",
+    name: "Home",
   },
   {
-    link: "/home#about",
-    name: "About Me",
+    link: "/about-us",
+    name: "About Us",
   },
   {
-    link: "/home#contacts",
-    name: "Contacts",
-  },
-];
-
-export const PageUrlMd = [
-  {
-    link: "/home#projects",
-    name: "Work",
+    link: "#packages",
+    name: "Packages",
   },
   {
-    link: "/home#skills",
-    name: "Skills",
-  },
-  {
-    link: "/home#about",
-    name: "About Me",
+    link: "/shop",
+    name: "Shop",
   },
 ];

@@ -3,7 +3,7 @@ import CldImages from "@/components/cloudinary/CldImages";
 
 export default function Packages() {
   return (
-    <section className="relative ">
+    <section id="packages" className="relative ">
       <div className="sm:container lg_0:container xl:container px-[23px] lg:px-[108px] xl:px-[89px] pt-[55px] pb-[73px] lg:pt-[84px] lg:pb-[84px] xl:pt-[70px] xl:pb-[59px]">
         <div className="mb-[37px] lg:mb-[77px] xl:mb-[75px]">
           <div className="text-center text-[24px] lg:text-[32px] xl:text-[36px] leading-[28.8px] lg:leading-[38.4px] xl:leading-[43.2px] font-display font-medium">

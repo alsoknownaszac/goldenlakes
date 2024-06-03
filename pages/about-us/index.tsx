@@ -13,35 +13,39 @@ import Hero_Section from "@/components/about_us/hero-section/Hero_Section";
 import Breath_Away from "@/components/about_us/breath-away/Breath_Away";
 import Philosophy from "@/components/about_us/philosophy/Philosophy";
 import Team from "@/components/about_us/team/Team";
+import Layout from "@/components/layout/Layout";
+import SideBar from "@/components/layout/SideBar";
 
 const AboutUs = () => {
   return (
-    <div className={`h-screen w-screen overflow-x-hidden `}>
-      <Head>
-        <title>About Us</title>
-      </Head>
-      <>
-        <Hero_Section />
-        <Breath_Away />
-        <Philosophy />
-        <Team />
-        <High_Expectations />
-        <Call_To_Action />
-        <Packages />
-        <Reviews />
-        <Call_To_Action />
-        <Footer />
-      </>
-    </div>
+    <>
+      <Hero_Section />
+      <Breath_Away />
+      <Philosophy />
+      <Team />
+      <High_Expectations />
+      <Call_To_Action />
+      <Packages />
+      <Reviews />
+      <Call_To_Action />
+      <Footer />
+      <SideBar />
+    </>
   );
 };
 
-// Page.getLayout = function getLayout(page: ReactElement) {
-//   return (
-//     <Layout>
-//       <NestedLayout>{page}</NestedLayout>
-//     </Layout>
-//   );
-// };
+AboutUs.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      <div className={`h-screen w-screen overflow-x-hidden `}>
+        <Head>
+          <title>About Us</title>
+        </Head>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </div>
+    </Layout>
+  );
+};
 
 export default AboutUs;

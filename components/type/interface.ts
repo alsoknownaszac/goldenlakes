@@ -115,7 +115,12 @@ export interface ICarousel {
 //layout
 
 export interface ILayout {
-  className: string;
+  className?: string;
+  children: React.ReactNode;
+}
+
+export interface INestedLayout {
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -123,12 +128,5 @@ export interface ILayout {
 
 export interface INavSm {
   url: string;
-  display: { modal: boolean; navMenu: boolean };
-  setDisplay: React.Dispatch<
-    React.SetStateAction<{
-      modal: boolean;
-      navMenu: boolean;
-    }>
-  >;
   navigate: NextRouter;
 }

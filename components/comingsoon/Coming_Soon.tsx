@@ -1,44 +1,38 @@
 import React, { useContext } from "react";
-import Hero_Logo from "../../icons_components/icons/Hero_Logo";
-import CldImages from "@/components/cloudinary/CldImages";
+import Coming_Soon_Logo from "../../assets/icons/coming_soon.svg";
+import Image from "next/image";
 import { AppContext } from "@/components/hooks/AppContext.hook";
 import Link from "next/link";
 import { PageUrl } from "@/components/constants/pageUrl";
 import { useRouter } from "next/router";
+import Hero_Logo_2 from "../icons_components/icons/Hero_Logo_2";
 
-export default function Hero_Section() {
+export default function Coming_Soon() {
   const navigate = useRouter();
 
   const url = navigate.asPath;
 
   const { display, setDisplay }: any = useContext(AppContext);
+
   return (
-    <section
-      id="hero"
-      className="hero text-white relative h-[609px] w-full xl:h-[833px] px-[21px] lg:px-[34px] xl:px-[88px] pt-[24px] lg:pt-[40px] xl:pt-[37px] pb-[35px] xl:pb-[42px]"
-    >
-      <CldImages
-        className="w-full h-full absolute"
-        src="/goldenlakes/memories6_pdzmkx"
-        style={{ objectFit: "cover" }}
-        priority={true}
-        fill
-        alt="lineup-img"
-      />
+    <section className="hero text-black w-full px-[21px] lg:px-[34px] xl:px-[88px] pt-[24px] lg:pt-[40px] xl:pt-[37px] pb-[35px] xl:pb-[42px]">
       <div className="sm:container lg_0:container xl:container relative h-full w-full flex flex-col">
         <div className="flex items-center justify-between">
           <div className="w-[20%]">
-            <Hero_Logo />
+            <Hero_Logo_2 />
           </div>
           <div className="lg:w-[55%] xl:w-[37%] hidden lg:block">
-            <div className="font-satoshi font-normal lg:text-[13px] xl:text-[15px] text-center lg:leading-[13px] xl:leading-[15px] w-full rounded-[40px] px-[24px] py-[17px] bg-black/[.26] backdrop-blur-md grid grid-cols-4 gap-8">
+            <div className="font-satoshi font-normal lg:text-[13px] xl:text-[15px] text-center lg:leading-[13px] xl:leading-[15px] w-full rounded-[40px] px-[24px] py-[17px] bg-[#EBE9E9]/[.26] backdrop-blur-md grid grid-cols-4 gap-8">
               {PageUrl.map(
                 (title: { link: string; name: string }, index: number) => {
                   return (
                     <Link
                       key={index}
                       href={
-                        title.name === "Packages"
+                        title.name === "Packages" &&
+                        url.split("/")[1] === "shop"
+                          ? "/" + title.link
+                          : title.name === "Packages"
                           ? url + title.link
                           : title.link
                       }
@@ -145,11 +139,15 @@ export default function Hero_Section() {
             </div>
           </div>
         </div>
-        <div className="flex my-auto lg:max-w-[604px] xl:max-w-[768px] mx-auto">
-          <span className="text-center text-[40px] lg:text-[48px] xl:text-[64px] leading-[40px] lg:leading-[57.6px] xl:leading-[76.8px] font-display font-bold">
-            Experience <span className="text-[#EBAF15]">the perfect</span>{" "}
-            getaway with us.
-          </span>
+        <div className="relative mt-[92px] lg:mt-[127px] xl:mt-[202px] mb-[147px] lg:mb-[206px] h-[240px] sm_0:h-[400px] lg:h-[422px] xl:h-[640px] max-w-full">
+          <Image
+            className="w-full h-full absolute"
+            src={Coming_Soon_Logo}
+            style={{ objectFit: "contain" }}
+            priority={true}
+            fill
+            alt="lineup-img"
+          />
         </div>
       </div>
     </section>

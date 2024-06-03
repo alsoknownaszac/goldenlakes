@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Hero_Logo from "../../icons_components/icons/Hero_Logo";
 import Hero_Icon_1 from "../../icons_components/icons/Hero_Icon_1";
 import Hero_Icon_2 from "../../icons_components/icons/Hero_Icon_2";
@@ -7,8 +7,18 @@ import Hero_Icon_3 from "../../icons_components/icons/Hero_Icon_3";
 import Hero_Icon_5 from "../../icons_components/icons/Hero_Icon_5";
 import Hero_Icon_6 from "../../icons_components/icons/Hero_Icon_6";
 import CldImages from "@/components/cloudinary/CldImages";
+import { AppContext } from "@/components/hooks/AppContext.hook";
+import Link from "next/link";
+import { PageUrl } from "@/components/constants/pageUrl";
+import { useRouter } from "next/router";
 
 export default function Hero_Section() {
+  const navigate = useRouter();
+
+  const url = navigate.asPath;
+
+  const { display, setDisplay }: any = useContext(AppContext);
+
   return (
     <section
       id="hero"
@@ -29,17 +39,37 @@ export default function Hero_Section() {
           </div>
           <div className="lg:w-[55%] xl:w-[37%] hidden lg:block">
             <div className="font-satoshi font-normal lg:text-[13px] xl:text-[15px] text-center lg:leading-[13px] xl:leading-[15px] w-full rounded-[40px] px-[24px] py-[17px] bg-black/[.26] backdrop-blur-md grid grid-cols-4 gap-8">
-              <div className="cursor-pointer">Home</div>
-              <div className="cursor-pointer">About Us</div>
-              <div className="cursor-pointer">Packages</div>
-              <div className="cursor-pointer">Shop</div>
+              {PageUrl.map(
+                (title: { link: string; name: string }, index: number) => {
+                  return (
+                    <Link
+                      key={index}
+                      href={
+                        title.name === "Packages"
+                          ? url + title.link
+                          : title.link
+                      }
+                      passHref={true}
+                    >
+                      <span className={`${title.link === url && "font-bold"}`}>
+                        {title.name}
+                      </span>
+                    </Link>
+                  );
+                }
+              )}
             </div>
           </div>
           <div className="w-[20%]">
             <div className="hidden lg:block cursor-pointer ml-auto font-satoshi font-semibold bg-[#EBAF15] lg:text-[13px] xl:text-[15px] text-[#292525] text-center lg:leading-[13px] xl:leading-[15px] w-fit rounded-[40px] px-[24px] py-[14px] hover:border-[4px] hover:border-[#292525] ">
               Request Info
             </div>
-            <div className="block lg:hidden cursor-pointer ml-auto">
+            <div
+              onClick={() => {
+                setDisplay({ ...display, modal: true });
+              }}
+              className="block lg:hidden cursor-pointer ml-auto"
+            >
               <svg
                 width="45"
                 height="40"
